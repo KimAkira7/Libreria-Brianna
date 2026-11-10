@@ -1304,9 +1304,11 @@ function mostrarRegistro() {
             </button>
 
             <div class="brianna-extension">
-                <div class="extension-icono">
-                    <i class="fab fa-chrome"></i>
-                </div>
+                <div class="brianna-extension">
+                    <div class="extension-icono">
+                        <img src="extension-brihanna/img/extension128.png"
+                        alt="Extensión Librería Brianna">
+                    </div>
 
                 <div class="extension-info">
                     <strong>
