@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 360px;
+    min-height: 300px;
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #F7F7F2;
+    color: #333333;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background: #FFFFFF;
+    border-bottom: 2px solid #00AFC1;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 17px;
+    color: #008D9A;
+}
+
+.encabezado p {
+    margin: 4px 0 0;
+    font-size: 11px;
+    color: #666666;
+}
+
+main {
+    padding: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.grupo-busqueda {
+    display: flex;
+    gap: 7px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 7px;
+    outline: none;
+    font: inherit;
+    font-size: 12px;
+}
+
+input:focus {
+    border-color: #00AFC1;
+}
+
+button {
+    padding: 10px 13px;
+    border: none;
+    border-radius: 7px;
+    background: #00AFC1;
+    color: #FFFFFF;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #008D9A;
+}
+
+#estadoBusqueda {
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+#resultadosProductos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.producto {
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid #E1E1DA;
+    border-radius: 9px;
+}
+
+.producto h3 {
+    margin: 0 0 7px;
+    font-size: 13px;
+}
+
+.producto p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.producto a {
+    display: inline-block;
+    margin-top: 7px;
+    color: #008D9A;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.producto a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid #DDDDD5;
+    text-align: center;
+}
+
+footer a {
+    color: #008D9A;
+    font-size: 12px;
+    text-decoration: none;
+}

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Brianna</title>
+    <link rel="icon" type="image/png" href="img/icon-brianna.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-principal">
+
+            <div class="logo">
+                <img
+                    src="img/icon-brianna.png"
+                    alt="Librería Brianna"
+                >
+            </div>
+
+            
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="buscador-productos"
+                    placeholder="Buscar productos..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="btn-limpiar-busqueda"
+                    aria-label="Borrar búsqueda"
+                    title="Borrar búsqueda"
+                >
+                    ×
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-buscar"
+                    aria-label="Buscar"
+                >
+                    🔍
+                </button>
+
+            </div>
+
+            <div class="acciones">
+
+                <button
+                    type="button"
+                    id="btn-cuenta"
+                    title="Mi cuenta"
+                    aria-label="Mi cuenta"
+                >
+                    👤
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-favoritos"
+                    title="Favoritos"
+                    aria-label="Favoritos"
+                >
+                    ♡
+
+                    <span
+                        id="contador-favoritos"
+                        class="contador-accion"
+                    >
+                        0
+                    </span>
+                </button>
+
+                <button
+                    type="button"
+                    id="btn-carrito"
+                    title="Carrito"
+                    aria-label="Carrito"
+                >
+                    🛒
+
+                    <span
+                        id="contador-carrito"
+                        class="contador-accion"
+                    >
+                        0
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a
+                href="#inicio"
+                data-seccion="inicio"
+                class="activo"
+            >
+                Inicio
+            </a>
+
+            <a
+                href="#productos"
+                data-seccion="productos"
+            >
+                Productos
+            </a>
+
+            <a
+                href="#categorias"
+                data-seccion="categorias"
+            >
+                Categorías
+            </a>
+
+            <a
+                href="#ofertas"
+                data-seccion="ofertas"
+            >
+                Ofertas
+            </a>
+
+            <a
+                href="#nosotros"
+                data-seccion="nosotros"
+            >
+                Nosotros
+            </a>
+
+            <a
+                href="#contacto"
+                data-seccion="contacto"
+            >
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+
+        <section
+            id="inicio"
+            class="pagina-seccion activa"
+        >
+
+
+            <section class="hero">
+
+                <div class="hero-contenido">
+
+                    <div class="hero-texto">
+
+                        <h1>
+                            Todo lo que necesitas
+                            <span>en un solo lugar</span>
+                        </h1>
+
+                        <p>
+                            Encuentra productos escolares, materiales de arte,
+                            artículos de belleza, productos electrónicos y mucho más.
+                        </p>
+
+                        <a
+                            href="#productos"
+                            id="btn-ver-productos"
+                            class="btn-principal"
+                            data-seccion="productos"
+                        >
+                            Ver productos
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-imagen">
+
+                        <img
+                            src="img/banner-utiles.png"
+                            alt="Útiles escolares de Librería Brianna"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="categorias">
+
+                <div class="categorias-contenido">
+
+                    <div class="titulo-seccion">
+
+                        <h2>Categorías</h2>
+
+                        <p>
+                            Encuentra rápidamente lo que estás buscando.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="categorias-grid"
+                        id="categorias-inicio"
+                    >
+
+                        <a
+                            href="#categorias"
+                            class="categoria"
+                            data-categoria-inicio="Productos de belleza"
+                        >
+                            <span>💄</span>
+                            <h3>Productos de belleza</h3>
+                        </a>
+
+
+                        <a
+                            href="#categorias"
+                            class="categoria"
+                            data-categoria-inicio="Productos electrónicos"
+                        >
+                            <span>💻</span>
+                            <h3>Productos electrónicos</h3>
+                        </a>
+
+
+                        <a
+                            href="#categorias"
+                            class="categoria"
+                            data-categoria-inicio="Material escolar"
+                        >
+                            <span>📚</span>
+                            <h3>Material escolar</h3>
+                        </a>
+
+
+                        <a
+                            href="#categorias"
+                            class="categoria"
+                            data-categoria-inicio="Material de arte"
+                        >
+                            <span>🎨</span>
+                            <h3>Material de arte</h3>
+                        </a>
+
+
+                        <a
+                            href="#categorias"
+                            class="categoria"
+                            data-categoria-inicio="Otros"
+                        >
+                            <span>📦</span>
+                            <h3>Otros</h3>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="productos-destacados">
+
+                <div class="productos-contenido">
+
+                    <div class="titulo-seccion">
+
+                        <h2>Productos destacados</h2>
+
+                        <p>
+                            Algunos productos disponibles en nuestra librería.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="productos-grid"
+                        id="productos-destacados-grid"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="promociones">
+
+                <div class="promociones-contenido">
+
+                    <div class="promocion-texto">
+
+                        <span class="etiqueta-promocion">
+                            OFERTAS
+                        </span>
+
+                        <h2>
+                            Encuentra productos a precios especiales
+                        </h2>
+
+                        <p>
+                            Revisa nuestras ofertas y encuentra productos
+                            disponibles con descuentos especiales.
+                        </p>
+
+                        <a
+                            href="#ofertas"
+                            class="btn-promocion"
+                            data-seccion="ofertas"
+                        >
+                            Ver ofertas
+                        </a>
+
+                    </div>
+
+
+                    <div class="promocion-imagen">
+
+                        <img
+                            src="img/promocion1.png"
+                            alt="Promociones de Librería Brianna"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="promociones">
+
+                <div class="promociones-contenido">
+
+                    <div class="promocion-texto">
+
+                        <span class="etiqueta-promocion">
+                            PRODUCTOS
+                        </span>
+
+                        <h2>
+                            Todo lo que buscas en Librería Brianna
+                        </h2>
+
+                        <p>
+                            Consulta nuestros productos y encuentra diferentes
+                            opciones disponibles para tus necesidades.
+                        </p>
+
+                        <a
+                            href="#productos"
+                            class="btn-promocion"
+                            data-seccion="productos"
+                        >
+                            Ver productos
+                        </a>
+
+                    </div>
+
+
+                    <div class="promocion-imagen">
+
+                        <img
+                            src="img/promocion2.png"
+                            alt="Productos de Librería Brianna"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <section class="sobre-contacto">
+
+                <div class="sobre-contacto-contenido">
+
+
+                    <div class="sobre-nosotros">
+
+                        <span class="mini-titulo">
+                            SOBRE NOSOTROS
+                        </span>
+
+                        <h2>
+                            Librería Brianna
+                        </h2>
+
+                        <p>
+                            En Librería Brianna buscamos facilitar la consulta
+                            de nuestros productos, precios y disponibilidad.
+                        </p>
+
+                        <p>
+                            Nuestra página permite encontrar información de
+                            manera rápida y sencilla antes de realizar un pedido
+                            o visitar el establecimiento.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contacto-box">
+
+                        <h3>Contáctanos</h3>
+
+
+                        <div class="contacto-item">
+
+                            <span>📍</span>
+
+                            <div>
+                                <strong>Dirección</strong>
+
+                                <p id="contacto-direccion">
+                                    Santa Cruz, Bolivia
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>📱</span>
+
+                            <div>
+                                <strong>WhatsApp</strong>
+
+                                <p id="contacto-whatsapp">
+                                    Número de contacto
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>🕐</span>
+
+                            <div>
+                                <strong>Horario</strong>
+
+                                <p id="contacto-horario">
+                                    Horario de atención
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            id="btn-whatsapp"
+                            class="btn-contacto"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contactar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+
+        <section
+            id="productos"
+            class="pagina-seccion"
+        >
+
+            <section class="productos-destacados">
+
+                <div class="productos-contenido">
+
+                    <div class="titulo-seccion">
+
+                        <h2>Productos</h2>
+
+                        <p>
+                            Consulta nuestros productos, precios y disponibilidad.
+                        </p>
+
+                    </div>
+
+
+                    <p
+                        id="resultado-busqueda"
+                        class="resultado-busqueda"
+                    >
+                    </p>
+
+
+                    <div
+                        class="productos-grid"
+                        id="productos-grid"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <section
+            id="categorias"
+            class="pagina-seccion"
+        >
+
+            <section class="categorias">
+
+                <div class="categorias-contenido">
+
+                    <div class="titulo-seccion">
+
+                        <h2>Categorías</h2>
+
+                        <p>
+                            Selecciona una categoría para consultar sus productos.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="categorias-grid"
+                        id="categorias-grid"
+                    >
+                    </div>
+
+
+                    <div
+                        id="productos-categoria"
+                        class="productos-categoria"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <section
+            id="ofertas"
+            class="pagina-seccion"
+        >
+
+            <section class="productos-destacados">
+
+                <div class="productos-contenido">
+
+                    <div class="titulo-seccion">
+
+                        <h2>Ofertas</h2>
+
+                        <p>
+                            Productos que actualmente cuentan con descuento.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="productos-grid"
+                        id="ofertas-grid"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <section
+            id="nosotros"
+            class="pagina-seccion"
+        >
+
+            <section class="sobre-contacto">
+
+                <div class="sobre-contacto-contenido">
+
+
+                    <div class="sobre-nosotros">
+
+                        <span class="mini-titulo">
+                            SOBRE NOSOTROS
+                        </span>
+
+                        <h2>
+                            Librería Brianna
+                        </h2>
+
+                        <p>
+                            Librería Brianna ofrece diferentes productos
+                            destinados a estudiantes, familias y personas
+                            que necesitan artículos para sus actividades
+                            cotidianas.
+                        </p>
+
+                        <p>
+                            Esta página web fue desarrollada para facilitar
+                            la consulta de productos, precios y disponibilidad,
+                            ayudando a mejorar la atención al cliente.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contacto-box">
+
+                        <h3>¿Qué encontrarás?</h3>
+
+
+                        <div class="contacto-item">
+
+                            <span>🛍️</span>
+
+                            <div>
+                                <strong>Variedad de productos</strong>
+
+                                <p>
+                                    Diferentes artículos organizados por categorías.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>🔎</span>
+
+                            <div>
+                                <strong>Consulta rápida</strong>
+
+                                <p>
+                                    Información sobre precios y disponibilidad.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>🛒</span>
+
+                            <div>
+                                <strong>Realiza tus pedidos</strong>
+
+                                <p>
+                                    Agrega productos al carrito y realiza tu pedido.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <section
+            id="contacto"
+            class="pagina-seccion"
+        >
+
+            <section class="sobre-contacto">
+
+                <div class="sobre-contacto-contenido">
+
+
+                    <div class="sobre-nosotros">
+
+                        <span class="mini-titulo">
+                            CONTACTO
+                        </span>
+
+                        <h2>
+                            Estamos para ayudarte
+                        </h2>
+
+                        <p>
+                            Consulta nuestros productos desde la página y
+                            comunícate con Librería Brianna cuando necesites
+                            información adicional.
+                        </p>
+
+                        <p>
+                            Puedes revisar nuestra dirección, número de
+                            WhatsApp y horario de atención.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contacto-box">
+
+                        <h3>Información de contacto</h3>
+
+
+                        <div class="contacto-item">
+
+                            <span>📍</span>
+
+                            <div>
+                                <strong>Dirección</strong>
+
+                                <p id="contacto-direccion-pagina">
+                                    Santa Cruz, Bolivia
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>📱</span>
+
+                            <div>
+                                <strong>WhatsApp</strong>
+
+                                <p id="contacto-whatsapp-pagina">
+                                    Número de contacto
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contacto-item">
+
+                            <span>🕐</span>
+
+                            <div>
+                                <strong>Horario</strong>
+
+                                <p id="contacto-horario-pagina">
+                                    Horario de atención
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            id="btn-whatsapp-pagina"
+                            class="btn-contacto"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contactar por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="footer-contenido">
+
+
+            <div class="footer-marca">
+
+                <h3>Librería Brianna</h3>
+
+                <p>
+                    Productos escolares, materiales de arte,
+                    artículos de belleza, productos electrónicos
+                    y mucho más en un solo lugar.
+                </p>
+
+            </div>
+
+
+            <div class="footer-enlaces">
+
+                <h4>Enlaces</h4>
+
+                <a href="#inicio" data-seccion="inicio">
+                    Inicio
+                </a>
+
+                <a href="#productos" data-seccion="productos">
+                    Productos
+                </a>
+
+                <a href="#categorias" data-seccion="categorias">
+                    Categorías
+                </a>
+
+                <a href="#ofertas" data-seccion="ofertas">
+                    Ofertas
+                </a>
+
+                <a href="#nosotros" data-seccion="nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#contacto" data-seccion="contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-contacto">
+
+                <h4>Contacto</h4>
+
+                <p id="footer-direccion">
+                    Santa Cruz, Bolivia
+                </p>
+
+                <p id="footer-whatsapp">
+                    WhatsApp
+                </p>
+
+                <p id="footer-horario">
+                    Horario de atención
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-abajo">
+
+            <p>
+                © 2026 Librería Brianna
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <div
+        id="brianna-overlay"
+        class="brianna-overlay"
+        style="display: none;"
+    >
+    </div>
+
+
+    <div
+        id="notificacion"
+        class="notificacion"
+    >
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

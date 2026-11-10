@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Brianna</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <header class="encabezado">
+        <img
+            src="img/extension128.png"
+            alt="Logo de Librería Brianna"
+            class="logo"
+        >
+
+        <div>
+            <h1>Librería Brianna</h1>
+            <p>Encuentra lo que necesitas</p>
+        </div>
+    </header>
+
+    <main>
+        <form id="formularioBusqueda">
+            <label for="campoBusqueda">
+                ¿Qué producto estás buscando?
+            </label>
+
+            <div class="grupo-busqueda">
+                <input
+                    type="search"
+                    id="campoBusqueda"
+                    placeholder="Ej. lápices de colores"
+                    autocomplete="off"
+                >
+
+                <button type="submit" id="botonBuscar">
+                    Buscar
+                </button>
+            </div>
+        </form>
+
+        <section id="estadoBusqueda" aria-live="polite">
+            Busca un producto para consultar el catálogo.
+        </section>
+
+        <section id="resultadosProductos">
+            <!-- Los productos aparecerán aquí -->
+        </section>
+
+        <footer>
+            <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Buscar en Google
+            </a>
+        </footer>
+    </main>
+
+    <script src="supabase.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

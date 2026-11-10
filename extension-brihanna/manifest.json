@@ -1,0 +1,39 @@
+
+{
+  "manifest_version": 3,
+  "name": "Librería Brianna",
+  "version": "1.0.0",
+  "description": "Consulta productos, precios y disponibilidad de Librería Brianna.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://mlzmqppmsgguplzcldly.supabase.co/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "img/extension16.png",
+    "32": "img/extension32.png",
+    "48": "img/extension48.png",
+    "128": "img/extension128.png"
+  },
+  "action": {
+    "default_title": "Librería Brianna",
+    "default_popup": "popup.html"
+  }
+}
