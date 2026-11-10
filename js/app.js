@@ -1029,7 +1029,8 @@ function mostrarLogin() {
 
             <div class="brianna-extension">
                 <div class="extension-icono">
-                    <i class="fab fa-chrome"></i>
+                    <img src="extension-brihanna/img/extension128.png"
+                    alt="Icono de la extensión Librería Brianna">
                 </div>
 
                 <div class="extension-info">
