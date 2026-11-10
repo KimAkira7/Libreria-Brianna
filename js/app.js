@@ -1043,7 +1043,7 @@ function mostrarLogin() {
                 </div>
 
                 <a
-                    href="ENLACE_DE_TU_EXTENSION"
+                    href="https://github.com/user-attachments/files/34606595/extension-brihanna.zip"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-descargar-extension"
