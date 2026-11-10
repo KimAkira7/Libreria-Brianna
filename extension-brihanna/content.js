@@ -3,7 +3,7 @@
 
 (function () {
     const ID_SECCION = "brianna-resultados-extension";
-    const URL_LIBRERIA = "http://127.0.0.1:5500/LIBRERIA%20FINAL/index.html";
+    const URL_LIBRERIA = "https://kimakira7.github.io/Libreria-Brianna/";
 
     function obtenerBusqueda() {
         const parametros = new URLSearchParams(
