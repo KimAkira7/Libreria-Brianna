@@ -6127,8 +6127,15 @@ async function mostrarAdministradorPedidos() {
         
         if (errorClientes) throw errorClientes;
 
-
+        console.log("PEDIDOS:", (pedidos || []).map(p => ({
+            pedido: p.id,
+            cliente_id: p.cliente_id
+        })));
         
+        console.log("CLIENTES:", (clientes || []).map(c => ({
+            id: c.id,
+            nombre: c.nombre
+        })));
         const pedidosCompletos = (pedidos || []).map(pedido => {
             const cliente = (clientes || []).find(
                 usuario =>
