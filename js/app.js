@@ -6128,28 +6128,46 @@ async function mostrarAdministradorPedidos() {
         if (errorClientes) throw errorClientes;
 
 
-        const pedidosCompletos = (pedidos || []).map(pedido => ({
-            id: pedido.id,
-            numero: pedido.numero,
-            clienteId: pedido.cliente_id,
-            estado: pedido.estado,
-            total: Number(pedido.total) || 0,
-            fecha: pedido.fecha,
-            stockDevuelto: pedido.stock_devuelto,
-            comprobanteUrl: pedido.comprobante_url || "",
+        
+        const pedidosCompletos = (pedidos || []).map(pedido => {
+            const cliente = (clientes || []).find(
+                usuario =>
+                    String(usuario.id) === String(pedido.cliente_id)
+            );
+        
+            return {
+                id: pedido.id,
+                numero: pedido.numero,
+                clienteId: pedido.cliente_id,
+        
+                clienteNombre: cliente
+                    ? cliente.nombre
+                    : "Cliente no encontrado",
+        
+                clienteCorreo: cliente
+                    ? cliente.correo
+                    : "Correo no disponible",
+        
+                estado: pedido.estado,
+                total: Number(pedido.total) || 0,
+                fecha: pedido.fecha,
+                stockDevuelto: pedido.stock_devuelto,
+                comprobanteUrl: pedido.comprobante_url || "",
+        
+                productos: (detalles || [])
+                    .filter(detalle =>
+                        String(detalle.pedido_id) === String(pedido.id)
+                    )
+                    .map(detalle => ({
+                        productoId: detalle.producto_id,
+                        nombre: detalle.nombre_producto,
+                        precio: Number(detalle.precio) || 0,
+                        cantidad: Number(detalle.cantidad) || 0,
+                        subtotal: Number(detalle.subtotal) || 0
+                    }))
+            };
+        });
 
-            detalles: (detalles || [])
-                .filter(detalle =>
-                    String(detalle.pedido_id) === String(pedido.id)
-                )
-                .map(detalle => ({
-                    productoId: detalle.producto_id,
-                    nombre: detalle.nombre_producto,
-                    precio: Number(detalle.precio) || 0,
-                    cantidad: Number(detalle.cantidad) || 0,
-                    subtotal: Number(detalle.subtotal) || 0
-                }))
-        }));
 
         const contenido = pedidosCompletos.length
             ? pedidosCompletos
