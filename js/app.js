@@ -6119,6 +6119,14 @@ async function mostrarAdministradorPedidos() {
                 `);
 
         if (errorDetalles) throw errorDetalles;
+        
+        const { data: clientes, error: errorClientes } =
+            await supabaseBrihanna
+                .from("clientes")
+                .select("id, nombre, correo");
+        
+        if (errorClientes) throw errorClientes;
+
 
         const pedidosCompletos = (pedidos || []).map(pedido => ({
             id: pedido.id,
