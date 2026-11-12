@@ -1825,7 +1825,7 @@ function crearTarjetaProducto(producto) {
                     !disponible
                         ? `
                             <span class="badge-no-disponible">
-                                Agotado
+                                Sin stock
                             </span>
                         `
                         : ""
