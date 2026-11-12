@@ -3477,7 +3477,7 @@ async function cambiarCantidadCarrito(idProducto, cambio) {
         if (errorCarrito) throw errorCarrito;
 
         if (!carritoBD) {
-            throw new Error("No se encontró tu carrito.");
+            throw new Error("No se encontró tu coche.");
         }
 
         const { error } = await supabaseBrihanna
@@ -3523,7 +3523,7 @@ async function eliminarDelCarrito(idProducto) {
         if (errorCarrito) throw errorCarrito;
 
         if (!carritoBD) {
-            throw new Error("No se encontró tu carrito.");
+            throw new Error("No se encontró tu coche.");
         }
 
         const { error } = await supabaseBrihanna
